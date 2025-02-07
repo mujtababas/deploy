@@ -1,7 +1,8 @@
+// app/api/cart/remove/route.ts
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/route";  // Updated import path
+import { authOptions } from "../../auth/[...nextauth]/route";
 
 const prisma = new PrismaClient();
 
@@ -20,9 +21,8 @@ export async function DELETE(req: Request) {
     }
 
     // Remove item from the cart
-    await prisma.cartItem.deleteMany({
+    await prisma.cartItem.delete({
       where: {
-        cart: { userId: session.user.id },
         id: itemId,
       },
     });
