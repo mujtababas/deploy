@@ -12,6 +12,7 @@
   "dependencies": {
     "@auth/core": "^0.34.2",
     "@auth/prisma-adapter": "^2.7.4",
+    "@clerk/nextjs": "^6.11.1",
     "@prisma/client": "^6.2.1",
     "@sanity/client": "^6.25.0",
     "@sanity/image-url": "^1.1.0",
@@ -24,6 +25,7 @@
     "next": "15.0.4",
     "next-auth": "^4.24.11",
     "next-sanity": "^9.8.39",
+    "nodemailer": "^6.10.0",
     "prisma": "^6.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
